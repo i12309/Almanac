@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="title desc">
+  <title id="title">Временная схема приведённых затрат</title>
+  <desc id="desc">Приобретение происходит в момент ноль. Ежегодные эксплуатационные расходы в конце каждого из 20 лет приводятся к моменту ноль по ставке 5 процентов.</desc>
+  <rect width="960" height="460" rx="16" fill="#f4f1ea"/>
+  <g font-family="Arial, sans-serif" fill="#263b38">
+    <text x="38" y="47" font-size="12" letter-spacing="2" fill="#727d74">СХЕМА 02 · УЧЕБНАЯ МОДЕЛЬ</text>
+    <text x="38" y="84" font-size="27" font-weight="600">Когда возникают расходы</text>
+    <text x="38" y="112" font-size="15" fill="#69786d">Платежи конца года · постоянные параметры · остаточная стоимость принята равной нулю</text>
+    <path d="M87 235H870" stroke="#99a79a" stroke-width="2"/>
+    <g stroke="#c5d0bf" stroke-width="2"><path d="M91 171V235"/><path d="M275 182V235"/><path d="M451 182V235"/><path d="M803 182V235"/></g>
+    <g fill="#4c7a69"><circle cx="91" cy="235" r="6"/><circle cx="275" cy="235" r="6"/><circle cx="451" cy="235" r="6"/><circle cx="803" cy="235" r="6"/></g>
+    <g text-anchor="middle"><text x="91" y="269" font-size="15">Год 0</text><text x="275" y="269" font-size="15">Год 1</text><text x="451" y="269" font-size="15">Год 2</text><text x="627" y="241" font-size="24" fill="#81918a">…</text><text x="803" y="269" font-size="15">Год 20</text>
+    <text x="91" y="159" font-size="15" font-weight="600">Покупка</text><text x="275" y="161" font-size="15">Расходы / 1,05</text><text x="451" y="161" font-size="15">Расходы / 1,05²</text><text x="803" y="161" font-size="15">Расходы / 1,05²⁰</text></g>
+    <rect x="38" y="311" width="884" height="90" rx="9" fill="#fffdf8" stroke="#d3d8ca"/>
+    <text x="60" y="345" font-size="16" font-weight="600">Млн руб./год: обслуживание + пробег × кВт·ч/км × тариф / 10⁶</text>
+    <text x="60" y="376" font-size="15" fill="#69786d">При 250 000 км/год и 8 руб./кВт·ч: A — 13,6 млн руб.; B — 11,0 млн руб.</text>
+    <text x="38" y="435" font-size="13" fill="#69786d">Сравниваются только затраты. Выручка, инфляция и доходность проекта здесь не рассчитываются.</text>
+  </g>
+</svg>

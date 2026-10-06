@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="title desc">
+  <title id="title">Как исследовательская глава связывает материалы, модель и проверку</title>
+  <desc id="desc">Документы и исходники дают основания для модели. Расчёт позволяет построить график, а контрольные примеры связывают результат с исходными материалами. Неустановленные сведения остаются вопросами.</desc>
+  <rect width="960" height="460" rx="16" fill="#f4f1ea"/>
+  <g font-family="Arial, sans-serif" fill="#263b38">
+    <text x="38" y="47" font-size="12" letter-spacing="2" fill="#727d74">СХЕМА 02 · УСТРОЙСТВО ГЛАВЫ</text>
+    <text x="38" y="84" font-size="27" font-weight="600">От материала к проверяемому результату</text>
+    <text x="38" y="112" font-size="15" fill="#69786d">Этот путь станет основой разбора реального архива после согласования макета.</text>
+    <g fill="#fffdf8" stroke="#d3d8ca"><rect x="38" y="150" width="264" height="107" rx="10"/><rect x="348" y="150" width="264" height="107" rx="10"/><rect x="658" y="150" width="264" height="107" rx="10"/></g>
+    <g font-size="19" font-weight="600"><text x="59" y="189">Материалы</text><text x="369" y="189">Модель</text><text x="679" y="189">Результат</text></g>
+    <g font-size="14" fill="#69786d"><text x="59" y="221">Документ, исходник, данные</text><text x="369" y="221">Формулы и предположения</text><text x="679" y="221">Таблица, график, вывод</text></g>
+    <g stroke="#81918a" fill="none" stroke-width="1.5"><path d="M309 204H340M332 198L340 204L332 210"/><path d="M619 204H650M642 198L650 204L642 210"/><path d="M790 262V290H170V262"/></g>
+    <rect x="260" y="282" width="440" height="77" rx="9" fill="#e8efe5" stroke="#c8d4c4"/>
+    <text x="480" y="313" font-size="17" font-weight="600" fill="#4c7a69" text-anchor="middle">Сверка с контрольным примером</text>
+    <text x="480" y="339" font-size="14" fill="#69786d" text-anchor="middle">Параметры, промежуточные величины, итог</text>
+    <text x="38" y="403" font-size="15">Неустановленное остаётся вопросом. Новая реализация получает отдельную подпись.</text>
+    <text x="38" y="432" font-size="14" fill="#69786d">Схема редакционного процесса; она не подтверждает завершённость реального исследования.</text>
+  </g>
+</svg>

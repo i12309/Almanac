@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Коды БЧХ — Альманах</title><link rel="stylesheet" href="../assets/css/site.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"></head><body><main class="print-page"><header><nav class="print-topnav"><a href="index.html">← Все главы</a><a href="../index.html#work/bch-demo/story">Интерактивная версия ↗</a></nav><p class="eyebrow" style="margin-top:24px">2003 · Учебная глава; дата условная</p><h1>Коды БЧХ</h1><p>След ошибки в двоичном слове</p><p class="small-text muted">Версия для чтения и печати. Все тексты, таблицы, иллюстрации и исходники доступны без JavaScript.</p></header><section id="question"><h2>Как заметить ошибку в сообщении</h2><p>При передаче двоичного сообщения один или несколько битов могут измениться. Добавленные проверочные биты позволяют обнаруживать такие изменения и, в пределах возможностей кода, восстанавливать исходное слово.</p><p>В этой учебной главе можно изменить биты принятого слова и увидеть, как пересчитываются синдромы. Это новый пример для макета; параметры, тексты и результаты диплома будут восстановлены из вашего архива.</p></section><section id="construction"><h2>Код и соглашения</h2><p>В примере выбран двоичный БЧХ-код (15, 7, 5): 7 информационных битов превращаются в слово длиной 15 бит. Минимальное расстояние 5 позволяет корректному декодеру гарантированно исправлять до двух ошибок.</p><p>Поле GF(16) построено по p(x) = x⁴ + x + 1. Порождающий полином g(x) = x⁸ + x⁷ + x⁶ + x⁴ + 1. Бит i соответствует коэффициенту при xⁱ; в записи слова старший бит находится слева.</p><div class="formula">c(x) = m(x)·x⁸ + rem(m(x)·x⁸, g(x))</div></section><section id="syndromes"><h2>Что именно показывает синдром</h2><p>Синдромы вычисляются подстановкой элементов поля в принятое слово. Сложение коэффициентов выполняется через XOR, умножение — с приведением по примитивному полиному. Числа 0…15 в таблице служат компактной записью элементов поля.</p><p>Для сообщения 1011001 получаем 101100100011110. Если изменить коэффициенты x² и x⁹, получится 101101100011010, а синдромы S₁…S₄ будут равны 14, 11, 3, 9. Нулевые синдромы показывают принадлежность слова к коду, но не доказывают, что при передаче не возникло искажения.</p><div class="formula">Sⱼ = r(αʲ), j = 1…4; α = x mod p(x)</div></section><section id="probability"><h2>Как читать график вероятностей</h2><p>График показывает вероятность того, что в блоке из 15 бит окажется не более одной или не более двух ошибок. Для расчёта принято, что каждый бит меняется независимо с одинаковой вероятностью p.</p><p>Это расчёт выбранной учебной модели. Кривые не являются замерами программы или оценкой фактической успешности декодера. При числе ошибок больше двух гарантии коррекции нет: возможны отказ или ошибочная коррекция.</p><div class="formula">P(K ≤ t) = Σₖ₌₀ᵗ C(15,k)·pᵏ·(1−p)¹⁵⁻ᵏ</div></section><section id="reading-code"><h2>От формулы к исходнику</h2><p>Во вкладке кода можно проследить умножение в GF(16), кодирование и вычисление синдромов, сопоставить формулу со строками и скачать полный учебный исходник Pascal.</p><p>Показанный Pascal-файл вычисляет синдромы; браузерный эксперимент использует заранее подготовленную реализацию приложения. При переносе реальной программы соглашения, промежуточные результаты и контрольные примеры будут сверены заново.</p></section><section><h2>Иллюстрации</h2><figure><img src="../content/assets/bch-demo/code-path.svg" alt="Четыре этапа: сообщение, кодирование, инверсия двух битов, вычисление четырёх синдромов."><figcaption>Рис. 1. Новая учебная схема для сообщения 1011001. Не иллюстрация из диплома.</figcaption></figure><figure><img src="../content/assets/bch-demo/field-arithmetic.svg" alt="Умножение x³ на x и приведение 10000 XOR 10011 к элементу 0011."><figcaption>Рис. 2. Пример приведения x⁴ к x + 1 по модулю x⁴ + x + 1. Схема создана для макета.</figcaption></figure></section><section><h2>Данные графиков</h2><h3>Сколько ошибок попадает в блок</h3><p class="small-text muted">Учебная биномиальная модель: 15 бит, независимые ошибки. Показаны P(K≤1) и P(K≤2), а не измеренная успешность декодирования. Данных из диплома в этом графике нет.</p><div class="table-wrap"><table><caption>Сколько ошибок попадает в блок</caption><thead><tr><th>Вероятность ошибки бита p</th><th>Не более 1 ошибки<br>Вероятность события, %</th><th>Не более 2 ошибок<br>Вероятность события, %</th></tr></thead><tbody><tr><th scope="row">0.0</th><td>100.0</td><td>100.0</td></tr><tr><th scope="row">0.01</th><td>99.037022656</td><td>99.95841973</td></tr><tr><th scope="row">0.02</th><td>96.466168509</td><td>99.696062544</td></tr><tr><th scope="row">0.03</th><td>92.702751399</td><td>99.062857401</td></tr><tr><th scope="row">0.04</th><td>88.089036727</td><td>97.970819694</td></tr><tr><th scope="row">0.05</th><td>82.90474645</td><td>96.379976136</td></tr><tr><th scope="row">0.06</th><td>77.376266991</td><td>94.286667617</td></tr><tr><th scope="row">0.07</th><td>71.684699663</td><td>91.713904603</td></tr><tr><th scope="row">0.08</th><td>65.972880068</td><td>88.703486819</td></tr><tr><th scope="row">0.09</th><td>60.351480955</td><td>85.309632541</td></tr><tr><th scope="row">0.1</th><td>54.904301892</td><td>81.593893089</td></tr><tr><th scope="row">0.11</th><td>49.692839061</td><td>77.621155449</td></tr><tr><th scope="row">0.12</th><td>44.760219142</td><td>73.456560451</td></tr><tr><th scope="row">0.13</th><td>40.134572833</td><td>69.163185979</td></tr><tr><th scope="row">0.14</th><td>35.831915764</td><td>64.800364319</td></tr><tr><th scope="row">0.15</th><td>31.858597555</td><td>60.422520409</td></tr><tr><th scope="row">0.16</th><td>28.213373293</td><td>56.078433335</td></tr><tr><th scope="row">0.17</th><td>24.8891459</td><td>51.810837364</td></tr><tr><th scope="row">0.18</th><td>21.874422534</td><td>47.656291112</td></tr><tr><th scope="row">0.19</th><td>19.154523369</td><td>43.64525427</td></tr><tr><th scope="row">0.2</th><td>16.712576742</td><td>39.802320925</td></tr></tbody></table></div></section><section><h2>Исходный код</h2><h3>Вычисление синдромов · Pascal</h3><p>Новый учебный исходник для макета, синтаксис Free Pascal. Не архивная программа владельца. Содержит кодирование и синдромы; декодера в этом файле нет.</p><p><a href="../content/assets/bch-demo/syndrome-demo.pas" download>Скачать исходник</a></p><pre><code>program SyndromeDemo;
+{$mode objfpc}{$H+}
+
+{ New teaching example for the Almanac mockup. Not a historical source.
+  Binary BCH(15,7,5), GF(16), p(x)=x^4+x+1, g(x)=x^8+x^7+x^6+x^4+1.
+  Bit i is the coefficient of x^i. This program computes syndromes only. }
+
+const
+  WordLength = 15;
+  Primitive = $13;
+  Generator = $1D1;
+  MessageValue = $59; { 1011001 }
+
+function GFMul(a, b: Byte): Byte;
+var
+  product: Byte;
+begin
+  product := 0;
+  while b &lt;&gt; 0 do
+  begin
+    if (b and 1) &lt;&gt; 0 then product := product xor a;
+    b := b shr 1;
+    a := a shl 1;
+    if (a and $10) &lt;&gt; 0 then a := a xor Primitive;
+  end;
+  GFMul := product;
+end;
+
+function GFPow(base: Byte; exponent: Integer): Byte;
+var
+  value: Byte;
+begin
+  value := 1;
+  while exponent &gt; 0 do
+  begin
+    if (exponent and 1) &lt;&gt; 0 then value := GFMul(value, base);
+    base := GFMul(base, base);
+    exponent := exponent shr 1;
+  end;
+  GFPow := value;
+end;
+
+function Encode(message: Word): Word;
+var
+  shifted, remainder: Word;
+  bitIndex: Integer;
+begin
+  shifted := message shl 8;
+  remainder := shifted;
+  for bitIndex := 14 downto 8 do
+    if (remainder and (Word(1) shl bitIndex)) &lt;&gt; 0 then
+      remainder := remainder xor (Generator shl (bitIndex - 8));
+  Encode := shifted or remainder;
+end;
+
+function Syndrome(received: Word; j: Integer): Byte;
+var
+  bitIndex: Integer;
+  value: Byte;
+begin
+  value := 0;
+  for bitIndex := 0 to WordLength - 1 do
+    if (received and (Word(1) shl bitIndex)) &lt;&gt; 0 then
+      value := value xor GFPow(2, (j * bitIndex) mod WordLength);
+  Syndrome := value;
+end;
+
+procedure PrintWord(value: Word);
+var
+  bitIndex: Integer;
+begin
+  for bitIndex := WordLength - 1 downto 0 do
+    Write((value shr bitIndex) and 1);
+end;
+
+var
+  codeword, received: Word;
+  j: Integer;
+begin
+  codeword := Encode(MessageValue);
+  received := codeword xor (Word(1) shl 2) xor (Word(1) shl 9);
+  Write(&#x27;Codeword: &#x27;); PrintWord(codeword); Writeln;
+  Write(&#x27;Received: &#x27;); PrintWord(received); Writeln;
+  Write(&#x27;Syndromes (integer representation of GF(16) elements):&#x27;);
+  for j := 1 to 4 do Write(&#x27; &#x27;, Syndrome(received, j));
+  Writeln;
+end.
+</code></pre></section><section><h2>Эксперимент</h2><p>Учебный БЧХ (15,7,5), GF(16). Меняйте биты и наблюдайте синдромы, включая особый случай пяти изменений с нулевыми синдромами. Исправление ошибок здесь не выполняется; это новый пример, не перенос диплома.</p><p><a href="../index.html#work/bch-demo/lab">Открыть работающий пример</a> (требуется JavaScript).</p></section><section><h2>Материалы</h2><ul><li><a href="../content/assets/bch-demo/source-notes.txt" download>Параметры и происхождение demo</a> — Соглашения, формулы и контрольный пример. Создано для макета.</li><li><a href="../content/assets/bch-demo/syndrome-probability.csv" download>Данные графика · CSV</a> — Вероятности числа ошибок в учебной модели, не экспериментальные замеры.</li><li><a href="../content/assets/bch-demo/syndrome-demo.pas" download>Учебная программа · Pascal</a> — Открывается как текст; запуск Pascal требует соответствующего компилятора.</li></ul></section><section><h2>Примечания</h2><p>Год 2003, структура главы и все материалы демонстрационные. Архив диплома не исследован.</p><p>Нулевой синдром означает принадлежность принятого слова к коду; это не доказательство отсутствия ошибки передачи.</p><p>Вероятностный график основан на независимых ошибках битов. Он не описывает произвольный канал и не измеряет время работы программы.</p><p>Показанные исходники и браузерный модуль — новые учебные реализации; исторические результаты владельцу не приписываются.</p></section></main></body></html>

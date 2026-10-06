@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="title desc">
+  <title id="title">Параметры абстрактной модели насыщения</title>
+  <desc id="desc">В формуле y равно A умножить на 1 минус экспонента минус x делённое на тау. A задаёт предельный уровень, тау — масштаб аргумента. Эта модель не связана с темой реальной диссертации.</desc>
+  <rect width="960" height="460" rx="16" fill="#f4f1ea"/>
+  <g font-family="Arial, sans-serif" fill="#263b38">
+    <text x="38" y="47" font-size="12" letter-spacing="2" fill="#727d74">СХЕМА 01 · АБСТРАКТНАЯ МОДЕЛЬ</text>
+    <text x="38" y="84" font-size="27" font-weight="600">Два параметра — два разных эффекта</text>
+    <text x="38" y="112" font-size="15" fill="#69786d">Безразмерный пример для макета. Не содержание диссертации владельца.</text>
+    <rect x="38" y="146" width="884" height="90" rx="10" fill="#fffdf8" stroke="#d3d8ca"/>
+    <text x="480" y="202" font-size="34" font-family="Georgia, serif" text-anchor="middle">y(x) = A · (1 − exp(−x / τ))</text>
+    <path d="M275 238V266M685 238V266" stroke="#acb9a8"/>
+    <rect x="38" y="266" width="426" height="127" rx="10" fill="#e8efe5" stroke="#c8d4c4"/>
+    <rect x="496" y="266" width="426" height="127" rx="10" fill="#f3e7de" stroke="#e3cdbb"/>
+    <text x="59" y="302" font-size="19" font-weight="600" fill="#4c7a69">A — предельный уровень</text><text x="517" y="302" font-size="19" font-weight="600" fill="#b45c43">τ — масштаб аргумента</text>
+    <text x="59" y="337" font-size="15">При увеличении x значение y стремится к A.</text><text x="517" y="337" font-size="15">Чем больше τ, тем медленнее растёт y.</text>
+    <text x="59" y="366" font-size="15">Основной пример: A = 1.</text><text x="517" y="366" font-size="15">При x = τ достигается ≈ 63,2% от A.</text>
+    <text x="38" y="432" font-size="14" fill="#69786d">В демонстрации x = 0…20; по умолчанию A = 1 и τ = 4. Это расчёт формулы, а не измерения.</text>
+  </g>
+</svg>

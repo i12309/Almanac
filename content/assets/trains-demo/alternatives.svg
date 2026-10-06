@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="title desc">
+  <title id="title">Две синтетические альтернативы подвижного состава</title>
+  <desc id="desc">Альтернатива A дешевле при приобретении, B требует меньших ежегодных затрат. Все параметры придуманы для учебной модели.</desc>
+  <rect width="960" height="460" rx="16" fill="#f4f1ea"/>
+  <g font-family="Arial, sans-serif" fill="#263b38">
+    <text x="38" y="47" font-size="12" letter-spacing="2" fill="#727d74">СХЕМА 01 · СИНТЕТИЧЕСКИЕ ПАРАМЕТРЫ</text>
+    <text x="38" y="84" font-size="27" font-weight="600">Приобретение и эксплуатация</text>
+    <text x="38" y="112" font-size="15" fill="#69786d">Одинаковый объём полезной работы — обязательное допущение сравнения.</text>
+    <rect x="38" y="145" width="424" height="243" rx="10" fill="#fffdf8" stroke="#d3d8ca"/>
+    <rect x="498" y="145" width="424" height="243" rx="10" fill="#fffdf8" stroke="#d3d8ca"/>
+    <circle cx="75" cy="181" r="20" fill="#4c7a69"/><circle cx="535" cy="181" r="20" fill="#b45c43"/>
+    <g fill="#fffdf8" text-anchor="middle" font-size="20"><text x="75" y="188">A</text><text x="535" y="188">B</text></g>
+    <text x="110" y="188" font-size="18" font-weight="600">Ниже начальная стоимость</text><text x="570" y="188" font-size="18" font-weight="600">Ниже ежегодные расходы</text>
+    <g font-size="41" font-weight="600"><text x="61" y="253" fill="#4c7a69">120</text><text x="521" y="253" fill="#b45c43">145</text></g>
+    <g font-size="14" fill="#69786d"><text x="157" y="251">млн руб. приобретение</text><text x="617" y="251">млн руб. приобретение</text></g>
+    <g stroke="#e0e3d7"><path d="M61 276H439"/><path d="M521 276H899"/></g>
+    <g font-size="15"><text x="61" y="309">Обслуживание</text><text x="521" y="309">Обслуживание</text><text x="61" y="346">Энергопотребление</text><text x="521" y="346">Энергопотребление</text></g>
+    <g font-size="15" text-anchor="end" font-weight="600"><text x="438" y="309">4,2 млн руб./год</text><text x="898" y="309">3,4 млн руб./год</text><text x="438" y="346">4,7 кВт·ч/км</text><text x="898" y="346">3,8 кВт·ч/км</text></g>
+    <text x="38" y="429" font-size="14" fill="#69786d">Учебные альтернативы. Не реальные поезда, предложения продавцов или отраслевые нормативы.</text>
+  </g>
+</svg>

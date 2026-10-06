@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="title desc">
+  <title id="title">Учебный путь от сообщения к синдромам БЧХ</title>
+  <desc id="desc">Из сообщения 1011001 получается кодовое слово 101100100011110. После инверсии коэффициентов x2 и x9 синдромы равны 14, 11, 3 и 9.</desc>
+  <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#81918a" stroke-width="1.2"/></marker></defs>
+  <rect width="960" height="460" rx="16" fill="#f4f1ea"/>
+  <g font-family="Arial, sans-serif" fill="#263b38">
+    <text x="38" y="47" font-size="12" letter-spacing="2" fill="#727d74">СХЕМА 01 · УЧЕБНЫЙ ПРИМЕР</text>
+    <text x="38" y="84" font-size="27" font-weight="600">Как изменение слова оставляет след</text>
+    <text x="38" y="111" font-size="15" fill="#69786d">БЧХ (15, 7, 5) · p(x) = x⁴ + x + 1 · коэффициент x⁰ — правый бит</text>
+    <g fill="#fffdf8" stroke="#d3d8ca"><rect x="36" y="146" width="198" height="145" rx="9"/><rect x="266" y="146" width="198" height="145" rx="9"/><rect x="496" y="146" width="198" height="145" rx="9"/><rect x="726" y="146" width="198" height="145" rx="9"/></g>
+    <g font-size="12" fill="#718277"><text x="52" y="172">01 / СООБЩЕНИЕ</text><text x="282" y="172">02 / КОДИРОВАНИЕ</text><text x="512" y="172">03 / ИСКАЖЕНИЕ</text><text x="742" y="172">04 / СИНДРОМЫ</text></g>
+    <g font-size="31" font-weight="600"><text x="52" y="221">7 бит</text><text x="282" y="221">15 бит</text><text x="512" y="221" fill="#b45c43">2 бита</text><text x="742" y="221" fill="#4c7a69">S₁…S₄</text></g>
+    <g font-size="14" fill="#69786d"><text x="52" y="265">1011001</text><text x="282" y="265">8 проверочных битов</text><text x="512" y="265">инверсия x² и x⁹</text><text x="742" y="265">14 · 11 · 3 · 9</text></g>
+    <g stroke="#81918a" marker-end="url(#arrow)"><path d="M240 216H259"/><path d="M470 216H489"/><path d="M700 216H719"/></g>
+    <path d="M38 325H922" stroke="#d0d5c8"/>
+    <text x="38" y="355" font-size="14" fill="#69786d">До изменения</text><text x="226" y="357" font-family="monospace" font-size="21">101100100011110</text>
+    <text x="38" y="391" font-size="14" fill="#69786d">После изменения</text><text x="226" y="393" font-family="monospace" font-size="21" fill="#b45c43">101101100011010</text>
+    <text x="558" y="356" font-size="14" fill="#69786d">Синдромы — элементы GF(16).</text>
+    <text x="558" y="382" font-size="14" fill="#69786d">Их запись числами не означает</text><text x="558" y="406" font-size="14" fill="#69786d">обычную целочисленную арифметику.</text>
+  </g>
+</svg>

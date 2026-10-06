@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="title desc">
+  <title id="title">Умножение элементов GF16 с приведением по примитивному полиному</title>
+  <desc id="desc">В поле, построенном по x4+x+1, произведение x3 и x равно x4. Приведение по модулю примитивного полинома даёт x+1, то есть 0011.</desc>
+  <rect width="960" height="460" rx="16" fill="#f4f1ea"/>
+  <g font-family="Arial, sans-serif" fill="#263b38">
+    <text x="38" y="47" font-size="12" letter-spacing="2" fill="#727d74">СХЕМА 02 · УЧЕБНЫЙ ПРИМЕР</text>
+    <text x="38" y="84" font-size="27" font-weight="600">За четырьмя битами — полином</text>
+    <text x="38" y="112" font-size="15" fill="#69786d">GF(16), p(x) = x⁴ + x + 1. Сложение коэффициентов выполняется по модулю 2.</text>
+    <rect x="38" y="146" width="405" height="226" rx="10" fill="#fffdf8" stroke="#d3d8ca"/>
+    <text x="61" y="178" font-size="13" fill="#718277">УМНОЖЕНИЕ НА x</text>
+    <g font-family="monospace" font-size="26"><text x="61" y="228">1000 × 0010</text><text x="61" y="274" fill="#b45c43">= 10000</text></g>
+    <text x="61" y="315" font-size="16">x³ × x = x⁴</text><text x="61" y="344" font-size="14" fill="#69786d">Появился разряд степени 4.</text>
+    <path d="M462 252H496M488 246L496 252L488 258" stroke="#81918a" fill="none" stroke-width="1.5"/>
+    <rect x="516" y="146" width="405" height="226" rx="10" fill="#e8efe5" stroke="#c8d4c4"/>
+    <text x="540" y="178" font-size="13" fill="#718277">ПРИВЕДЕНИЕ ПО p(x)</text>
+    <g font-family="monospace" font-size="26"><text x="540" y="228">10000 XOR 10011</text><text x="540" y="274" fill="#4c7a69">= 00011</text></g>
+    <text x="540" y="315" font-size="16">x⁴ ≡ x + 1 (mod p)</text><text x="540" y="344" font-size="14" fill="#69786d">Элемент поля: 0011, или число 3.</text>
+    <text x="38" y="415" font-size="14" fill="#69786d">Эта схема поясняет новый demo-код; она не взята из диплома.</text>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Личный альманах инженерных и исследовательских работ. Демонстрационный каркас для чтения, экспериментов и сохранения оригиналов.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <title>Альманах — история работ</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/content.generated.js" defer></script>
+  <script src="assets/js/labs.js" defer></script>
+  <script src="assets/js/chart.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">К содержанию</a>
+  <header class="topbar">
+    <a class="wordmark" href="#library" aria-label="Альманах: все работы"><span class="book-mark" aria-hidden="true">а.</span><span>Альманах<small>РАБОТЫ И ИССЛЕДОВАНИЯ</small></span></a>
+    <div class="topbar-actions">
+      <span class="edition-label">Демонстрационное издание</span>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Включить тёмную тему" title="Сменить тему"><span aria-hidden="true">◐</span></button>
+      <button class="mobile-menu button small" id="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false">Оглавление</button>
+    </div>
+  </header>
+  <div class="site-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Навигация альманаха">
+      <a class="library-link" href="#library"><span aria-hidden="true">←</span> Все работы</a>
+      <p class="eyebrow side-label">Оглавление</p>
+      <nav id="work-nav" class="work-nav" aria-label="Работы"></nav>
+      <div id="chapter-nav" class="chapter-nav"></div>
+      <div class="sidebar-foot"><p>Идеи. Программы.<br>История их создания.</p><a href="read/index.html">Версия для чтения ↗</a><span>Локальное издание · v0.1</span></div>
+    </aside>
+    <main id="main-content" class="main-content" tabindex="-1">
+      <noscript><section class="empty-state"><h1>Альманах работ</h1><p>Для графиков и экспериментов включите JavaScript. Все главы, таблицы, изображения и исходный код доступны в обычной версии для чтения.</p><a href="read/index.html">Открыть главы →</a></section></noscript>
+      <div id="app"><div class="loading-state">Открываем альманах…</div></div>
+    </main>
+  </div>
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-title">
+    <div class="image-dialog-top"><div><h2 id="image-title"></h2><p id="image-position" class="muted small-text"></p></div><button class="button" type="button" id="image-close" aria-label="Закрыть просмотр изображения">Закрыть ×</button></div>
+    <div class="image-stage" id="image-stage"><img id="image-full" alt="" draggable="false"></div>
+    <div class="image-toolbar"><div class="button-group"><button class="button" type="button" id="image-prev" aria-label="Предыдущее изображение">←</button><button class="button" type="button" id="image-next" aria-label="Следующее изображение">→</button></div><div class="button-group"><button class="button" type="button" id="image-zoom-out" aria-label="Уменьшить изображение">−</button><output id="image-zoom-label" aria-live="polite">100%</output><button class="button" type="button" id="image-zoom-in" aria-label="Увеличить изображение">+</button><button class="button" type="button" id="image-fit">Вместить</button></div><a class="button" id="image-download" download>Скачать</a></div>
+    <p class="image-caption" id="image-caption"></p>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
